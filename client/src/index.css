@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ---- Elevation interactivity ----
+   Applied via className alongside inline styles. Raised elements lift
+   slightly and deepen their shadow on hover (like light catching an edge
+   as it tilts toward you), then compress flat on press. This is what
+   makes the elevation system feel physical instead of just drawn once. */
+.elev-btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+.elev-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+.elev-btn:active:not(:disabled) {
+  transform: translateY(1px);
+  filter: brightness(0.97);
+}
+
+.elev-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.elev-card:hover {
+  transform: translateY(-2px);
+}
+
+select {
+  color-scheme: dark;
+}

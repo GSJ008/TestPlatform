@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0c10" />
+
+    <title>AI Coding Test Platform</title>
+
+    <!-- Product typefaces: Inter for UI text, JetBrains Mono for code/data -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Identity Services (Sign in with Google button) -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <!-- ✅ MediaPipe Face Mesh -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+
+    <!-- Optional: better performance -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils"></script>
+
+    <!-- Prevent right click (extra layer) -->
+    <script>
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
+    </script>
+    <video id="video" autoplay muted playsinline style="display:none;"></video>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- React App Root -->
+    <div id="root"></div>
+
+    <style>
+      body {
+        margin: 0;
+        background-color: #0a0c10;
+      }
+
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </body>
+</html>
